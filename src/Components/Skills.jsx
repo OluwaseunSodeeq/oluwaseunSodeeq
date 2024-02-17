@@ -30,8 +30,8 @@ function Skills() {
           transform your vision into a compelling online presence.
         </p>
       </div>
-      <div className="boxSHadow">
-        <div>
+      <div className="shadow-custom ">
+        <div className="mt-6 pb-4 pt-4 px-4 rounded-[16px] ">
           {skillsArray.map((each) => (
             <div key={each.skill}>
               <h5 className="text-btn-text-color text-base font-quicksand leading-5 font-normal">

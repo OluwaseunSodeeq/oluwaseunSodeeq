@@ -1,5 +1,6 @@
 import Header from "../Header";
 import HomepageHeroSection from "../HomepageHeroSection";
+import Projects from "../Projects";
 import Skills from "../Skills";
 
 function Homepage() {
@@ -8,6 +9,7 @@ function Homepage() {
       <Header />
       <HomepageHeroSection />
       <Skills />
+      <Projects />
     </>
   );
 }

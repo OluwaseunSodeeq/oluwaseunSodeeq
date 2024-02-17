@@ -8,6 +8,7 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
+
     extend: {
       colors: {
         "header-bg": "#fafbfc",
@@ -15,7 +16,9 @@ export default {
         "blue-text": "#005CB7",
         "btn-text-color": "#67696E",
         "text-color-two": "#F2F4F6",
-        "plain-white": "fff",
+        "plain-white": "#ffffff",
+        projectBorder:
+          "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
@@ -25,7 +28,31 @@ export default {
       boxShadow: {
         custom: "0px 4px 40px 0px rgba(127, 181, 230, 0.12)",
       },
+
+      border: {
+        gradient:
+          "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)", // Define custom border color for the gradient
+      },
+      borderImage: {
+        gradient:
+          "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
+      },
     },
   },
-  plugins: [],
+  // corePlugins: {
+  //   borderColor: true,
+  // },
+  // extend: {
+  //   borderStyle: {
+  //     solid: "solid", // Define custom border style
+  //   },
+  //   borderImage: {
+  //     gradient:
+  //       "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)", // Define custom border image
+  //   },
+  //   borderColor: {
+  //     gradient: "transparent", // Define custom border color for the gradient
+  //   },
+  //   plugins: [],
+  // },
 };
