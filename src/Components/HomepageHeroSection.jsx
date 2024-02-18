@@ -35,16 +35,16 @@ function HomepageHeroSection() {
               </button>
             </div>
           </div>
-          <div className="relative mt-5">
+          <div className=" w-full relative mt-5 overflow-x-hidden">
             <div>
-              <div className="w-[74px] h-[18px] left-[20%] top-[50px] bg-blue-text absolute rounded-full"></div>
-              <div className="absolute w-[120px] left-[8%] bottom-[50px] flex justify-between items-center">
+              <div className="w-[74px] h-[18px] left-[12%] top-[50px] bg-blue-text absolute rounded-full"></div>
+              <div className="absolute w-[120px] left-[0%] bottom-[50px] flex justify-between items-center">
                 <div className="w-[27px] h-[18px] bg-blue-text  rounded-full"></div>
                 <div className="w-[78px] h-[18px] bg-blue-text  rounded-full"></div>
               </div>
             </div>
-            <div className="w-full h-[220px] relative z-10 ml-[35%] bg-plain-white rounded-full border-[18px] border-blue-text">
-              <div className="w-[188px] h-[180px] ml-[20%] mt-[16px]  ">
+            <div className="w-[400px] h-[220px] relative z-10 ml-[28%] bg-plain-white rounded-full border-[18px] border-blue-text">
+              <div className="w-[95%] h-[180px] ml-[20%] mt-[16px]  ">
                 <img className="h-[94%]" src="../seun.png" alt="seun" />
               </div>
             </div>

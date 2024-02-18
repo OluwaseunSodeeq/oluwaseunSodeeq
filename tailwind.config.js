@@ -8,7 +8,6 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
-
     extend: {
       colors: {
         "header-bg": "#fafbfc",
@@ -39,20 +38,4 @@ export default {
       },
     },
   },
-  // corePlugins: {
-  //   borderColor: true,
-  // },
-  // extend: {
-  //   borderStyle: {
-  //     solid: "solid", // Define custom border style
-  //   },
-  //   borderImage: {
-  //     gradient:
-  //       "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)", // Define custom border image
-  //   },
-  //   borderColor: {
-  //     gradient: "transparent", // Define custom border color for the gradient
-  //   },
-  //   plugins: [],
-  // },
 };

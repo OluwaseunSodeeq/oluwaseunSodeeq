@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import Container from "../Ui/Container";
 import ContentContainer from "../Ui/ContentContainer";
 import "react-multi-carousel/lib/styles.css";
-
+// import "../Ui/styles.css";
 function Projects() {
   const projectArray = [
     {
@@ -53,12 +53,16 @@ function Projects() {
           </h4>
         </ContentContainer>
 
-        <div className="mt-[32px]">
+        <div className="mt-[22px]">
           {projectArray.map((each, i) => (
             <div key={i} className={` bg-${each.eachBg}`}>
               <ContentContainer>
-                <div className="flex flex-col">
-                  <div className="p-6 align-center">
+                <div
+                  className={`flex flex-col gap-y-5 md:gap-y-0 md:justify-between md:flex-row md:${
+                    (i + 1) % 2 !== 0 ? "flex-row-reverse" : ""
+                  } `}
+                >
+                  <div className="p-6 h-[295px] md:w-[330px] lg:w-[600px] lg:h-[509px] md:max-h-auto border-[2px] rounded-[16px]">
                     <h4>{each.title}</h4>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -71,27 +75,19 @@ function Projects() {
                       View Website
                     </button>
                   </div>
-
                   <div
-                    className="w-full  h-[295px]  md:w-[350px] "
+                    className=" relative flex items-center justify-center  w-full h-[295px]  md:w-[330px] md:h-auto lg:w-[590px] lg:h-[509px] rounded-[16px]  p-6 md:p-8 lg:p-[72px] "
                     style={{
-                      borderImage:
+                      background:
                         "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
-                      borderStyle: "solid",
-                      borderWidth: "24px",
-                      //   "@media (min-width: 768px)": {
-                      //     borderWidth: "32px",
-                      //   },
-                      //   "@media (min-width: 1024px)": {
-                      //     borderWidth: "72px",
-                      //   },
                     }}
                   >
-                    <div>
+                    <div className="relative z-10 w-full mx-auto my-">
+                      {/* <div className="w-full h-[295px] md:w-[350px] rounded-[16px] border-[24px] border-solid md:border-[32px] lg:border-[72px] border-gradient"> */}
                       <Carousel
                         responsive={responsive}
                         swipeable={true}
-                        showDots={true}
+                        showDots={false}
                         autoPlaySpeed={3000}
                         autoPlay={true}
                         arrows={false}
@@ -102,7 +98,7 @@ function Projects() {
                       >
                         {each.images.map((img, i) => (
                           <img
-                            className="w-full rounded-[10px] h-full"
+                            className="object-contain rounded-[10px] "
                             src={img}
                             alt={each.title}
                             key={i}

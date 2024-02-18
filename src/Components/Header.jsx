@@ -1,19 +1,77 @@
 import Container from "../Ui/Container";
-import ContentContainer from "../Ui/ContentContainer";
+import useOpenContext from "./Contexts/useOpenContext";
 import Hamburger from "./Hamburger";
 import Logo from "./Logo";
+import Nav from "./Nav";
+import Navbody from "./Navbody";
 
 function Header() {
+  const { open } = useOpenContext();
+  console.log(open);
   return (
-    <Container background="#fafbfc">
-      <ContentContainer>
-        <div className="w-full h-auto flex justify-between items-center px-6 py-4 border rounded-sm">
+    <Container>
+      <div className="fixed z-50 bg-plain-white top-0 px-6 py-4 md:px-[60px] md:py-6 lg:px-[104px] lg:py-6 w-full h-auto md:w-full lg:w-full lg:max-w-[1440px]  mx-auto   border">
+        <div className="w-full flex justify-between items-center">
           <Logo />
+          <Nav />
           <Hamburger />
         </div>
-      </ContentContainer>
+        <div
+          className={`duration-500 ease-in-out  ${
+            open ? "     translate-x-0    " : "   translate-x-[-200%]  "
+          }`}
+        >
+          <Navbody />
+        </div>
+      </div>
     </Container>
   );
 }
 
 export default Header;
+/*
+import Logo from "./Logo";
+import Hamburger from "./Hamburger";
+import useOpenContext from "./Contexts/useOpenContext";
+import Nav from "./Nav";
+
+function Header() {
+  const { open, HamburgerHandler } = useOpenContext();
+  console.log(open);
+
+  return (
+    <div
+      className={`fixed z-30 w-full top-0 ${
+        open
+          ? "bg-user-color"
+          : "shadow-lg shadow-[#7FB5E61F]-400 bg-plain-white"
+      }`}
+    >
+      <div
+        className={`w-full lg:max-w-[1440px]  md:mx-auto  overflow-x-hidden 
+h-20 md:h-28 lg:h-32 flex justify-between items-center  
+py-6 px-4 md:py-6 md:px-12 lg:py-6 lg:px-16  relative top-0  ${
+          open ? " duration-500 ease-in-out" : " duration-500 ease-in-out"
+        }      
+`}
+      >
+        <Logo />
+        <Hamburger handler={HamburgerHandler} />
+      </div>
+      <div className="w-full  lg:w-full lg:mx-auto">
+        <div
+          className={`duration-300 ease-in-out  ${
+            open
+              ? "  relative  z-30 translate-x-0    "
+              : " relative  z-30 translate-x-full  "
+          }`}
+        >
+          <Nav />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Header;
+*/

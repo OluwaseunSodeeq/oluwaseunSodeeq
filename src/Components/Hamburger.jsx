@@ -1,10 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
+import useOpenContext from "./Contexts/useOpenContext";
 
 function Hamburger() {
-  const [open, setOpen] = useState(false);
-  console.log(setOpen);
+  const { open, hamburgerHandler } = useOpenContext();
+
   return (
-    <div className="cursor-pointer">
+    <div className="block cursor-pointer lg:hidden" onClick={hamburgerHandler}>
       {open ? (
         <svg
           width="24"
