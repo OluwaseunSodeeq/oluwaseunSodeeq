@@ -1,13 +1,14 @@
 // import Button from "../Ui/Button";
 import Container from "../Ui/Container";
 import ContentContainer from "../Ui/ContentContainer";
+import Earth from "./Earth";
 
 function HomepageHeroSection() {
   return (
     <Container background="#fff">
       <ContentContainer>
-        <div className="rounded-lg px-6 py-4 mt-6">
-          <div>
+        <div className="rounded-lg px-6 pb-4 pt-16 mt-6 lg:flex justify-between items-center lg:pt-[80px] ">
+          <div className="w-full lg:w-[400px]">
             <p className="font-[600] text-base leading-5 font-inter text-text-color">
               Hi, i am
             </p>
@@ -35,7 +36,10 @@ function HomepageHeroSection() {
               </button>
             </div>
           </div>
-          <div className=" w-full relative mt-5 overflow-x-hidden">
+          <div>
+            <Earth />
+          </div>
+          {/* <div className="hidden w-full relative mt-5 overflow-x-hidden">
             <div>
               <div className="w-[74px] h-[18px] left-[12%] top-[50px] bg-blue-text absolute rounded-full"></div>
               <div className="absolute w-[120px] left-[0%] bottom-[50px] flex justify-between items-center">
@@ -48,7 +52,7 @@ function HomepageHeroSection() {
                 <img className="h-[94%]" src="../seun.png" alt="seun" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         ;
       </ContentContainer>

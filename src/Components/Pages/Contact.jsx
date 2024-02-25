@@ -6,11 +6,11 @@ import ContactHeroSection from "../ContactHeroSection";
 function Contact() {
   return (
     <Container>
-      <div>
-        <Header />
-        <ContactHeroSection />
-        <Footer />
-      </div>
+      {/* <div> */}
+      <Header />
+      <ContactHeroSection />
+      <Footer />
+      {/* </div> */}
     </Container>
   );
 }

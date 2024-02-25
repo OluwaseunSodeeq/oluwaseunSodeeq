@@ -1,4 +1,7 @@
+import { useForm } from "react-hook-form";
 import ContentContainer from "../Ui/ContentContainer";
+import Error from "../Ui/Error";
+// import Earth from "./Earth";
 
 function ContactHeroSection() {
   const contactArray = [
@@ -102,9 +105,15 @@ function ContactHeroSection() {
       text: ["ademolaoluwaseun90@gmail.com"],
     },
   ];
-  const contactHandler = function (e) {
-    e.preventDefault();
+
+  // const { register, handleSubmit, reset,getValues.name,formSTtate } = useForm();  to read error and to get value of ecah input
+  const { register, handleSubmit, reset, formState } = useForm();
+  const { errors } = formState;
+  const contactDatahandler = function (data) {
+    console.log(data);
   };
+  const onError = (error) => console.log(error);
+  console.log(onError, reset);
   return (
     <ContentContainer background="#ffffff">
       <div>
@@ -135,16 +144,27 @@ function ContactHeroSection() {
               </div>
             ))}
           </div>
-          <form className="lg:w-[644px] " onSubmit={(e) => contactHandler(e)}>
+          <form
+            className="lg:w-[644px] "
+            onSubmit={handleSubmit(contactDatahandler, onError)}
+          >
             <div className="w-full ">
               <div className="mt-8">
-                <input
-                  className="w-full py-2 lg:py-4  focus:outline-btn-text-color  pl-2 bg-text-color-two rounded-[8px] block "
-                  type="text"
-                  placeholder="Name"
-                  name="name"
-                  id=""
-                />
+                <div>
+                  <input
+                    className="w-full py-2 lg:py-4  focus:outline-btn-text-color  pl-2 bg-text-color-two rounded-[8px] block "
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    id="name"
+                    {...register("name", {
+                      required: "This field is required",
+                    })}
+                  />
+                  {errors?.name?.message && (
+                    <Error>{errors.name.message}</Error>
+                  )}
+                </div>
               </div>
               <div className="mt-2 flex flex-col gap-y-4 lg:gap-y-0 lg:gap-x-3 lg:flex-row">
                 <input
@@ -152,15 +172,29 @@ function ContactHeroSection() {
                   type="email"
                   placeholder="Email"
                   name="email"
-                  id=""
+                  id="email"
+                  {...register("email", {
+                    // required: "This field is required",
+                    validate: (value) => value.length > 3 || "error message",
+                  })}
                 />
+                {/* a way to display form validation error */}
+                {/* {errors?.name?.message && <Error>{errors.name.message}</Error>} */}
 
                 <input
                   className="w-full py-2 lg:py-4  pl-2 focus:outline-btn-text-color bg-text-color-two rounded-[8px] block "
                   type="text"
                   placeholder="Subject"
                   name="subject"
-                  id=""
+                  id="subject"
+                  {...register("subject", {
+                    required: "This field is required",
+                    min: {
+                      value: 3,
+                      // message: "subject should be more than three letters",
+                      message: "subject should be more than three letters",
+                    },
+                  })}
                 />
               </div>
               <textarea
@@ -168,6 +202,7 @@ function ContactHeroSection() {
                 name="message"
                 rows="5"
                 cols="50"
+                {...register("message", { required: "This field is required" })}
                 placeholder="Type your message here..."
                 className="w-full py-2 lg:py-4 focus:outline-btn-text-color  pl-2 bg-text-color-two rounded-[8px] block mt-3"
               />
@@ -182,6 +217,46 @@ function ContactHeroSection() {
             </div>
           </form>
         </div>
+        {/* <div>
+          <svg viewBox="0 0 300 200">
+            <path
+              className="opacity: 1; transition: all 0.3s linear 0.8s;"
+              // className="path"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              d="M 0 18 H 500"
+            ></path>
+            <path
+              className="opacity: 1; transition: all 0.3s linear 1.1s;"
+              // className="path"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              d="M 0 18 H 80 V 68 H 500"
+            ></path>
+            <path
+              className="opacity: 1; transition: all 0.3s linear 1.4s;"
+              // className="path"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              d="M 0 18 H 80 V 118 H 500"
+            ></path>
+            <path
+              className="opacity: 1; transition: all 0.3s linear 1.7s;"
+              // className="path"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              d="M 0 18 H 80 V 168 H 500"
+            ></path>
+          </svg>
+          ;
+        </div> */}
+        {/* <div>
+          <Earth />
+        </div> */}
       </div>
     </ContentContainer>
   );
