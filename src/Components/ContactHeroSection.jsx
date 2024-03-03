@@ -116,7 +116,7 @@ function ContactHeroSection() {
   console.log(onError, reset);
   return (
     <ContentContainer background="#ffffff">
-      <div>
+      <div className="lg:pt-[130px] md:px-[60px] px-4 pt-24">
         <h3 className="font-bold font-outfit text-2xl leading-8 text-text-color text-center">
           Get In Touch
         </h3>
@@ -125,11 +125,11 @@ function ContactHeroSection() {
           create something amazing!
         </p>
         <div className="lg:flex lg:flex-row-reverse lg:justify-center lg:gap-x-8">
-          <div className="w-full  py-[30px]  pl-[28px] p bg-text-color-two rounded-[16px] mt-8 lg:w-[397px] lg:h-[357px] lg:flex lg:flex-col lg:gap-y-4">
+          <div className="w-full  py-[30px]  pl-[28px]  bg-text-color-two rounded-[16px] mt-8 lg:w-[397px] lg:h-[357px] lg:flex lg:flex-col lg:gap-y-4">
             {contactArray.map((each) => (
               <div
                 key={each.heading}
-                className="flex gap-x-[16px] lg:gap-x-[36px] mt-2 "
+                className="flex gap-x-[16px] lg:gap-x-[36px] mt-2"
               >
                 <span className="w-[18px] h-[19px]">{each.icon}</span>
                 <div className="-mt-1">

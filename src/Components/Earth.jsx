@@ -7,7 +7,7 @@ import { SiTailwindcss } from "react-icons/si";
 
 const Earth = () => {
   return (
-    <div className="relative mt-14 w-[300px] h-[300px] lg:w-[400px]  lg:h-[400px] md:border  flex items-center  rounded-full">
+    <div className="relative mt-12 w-[300px] h-[300px] mx-auto lg:w-[420px]  lg:h-[420px] md:border  flex items-center  rounded-full">
       <div className="wheel">
         <div className="   cabin">
           <TiHtml5 style={{ color: "orangered", fontSize: "inherit" }} />

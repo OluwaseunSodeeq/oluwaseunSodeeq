@@ -12,7 +12,7 @@ function Skills() {
   const maxPercent = 10;
   return (
     <ContentContainer>
-      <div className=" lg:flex lg:justify-center lg:items-center gap-x-[72px]">
+      <div className=" lg:flex lg:justify-center lg:items-center gap-x-[72px] mt-[-30px]">
         <div className="hidden lg:block w-[420px] h-[441px]">
           <img src="../skillpic.png" alt="Oluwaseun Sodeeq" />
         </div>

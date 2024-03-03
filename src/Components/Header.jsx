@@ -10,8 +10,8 @@ function Header() {
   console.log(open);
   return (
     <Container>
-      <div className="fixed z-50 bg-plain-white top-0 px-6 py-4 md:px-[60px] md:py-6 lg:px-[104px] lg:py-6 w-full h-auto md:w-full lg:w-full lg:max-w-[1440px]  mx-auto   border">
-        <div className="w-full flex justify-between items-center">
+      <div className="fixed z-50 bg-plain-white top-0 left-0 right-0 px-6 py-4 md:px-[80px] md:py-6 lg:px-[104px] lg:py-6 w-full h-auto md:w-full lg:w-full lg:max-w-[1440px]  mx-auto ">
+        <div className="w-full mx-auto flex justify-between items-center ">
           <Logo />
           <Nav />
           <Hamburger />

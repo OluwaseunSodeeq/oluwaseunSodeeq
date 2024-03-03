@@ -7,7 +7,7 @@ function HomepageHeroSection() {
   return (
     <Container background="#fff">
       <ContentContainer>
-        <div className="rounded-lg px-6 pb-4 pt-16 mt-6 lg:flex justify-between items-center lg:pt-[80px] ">
+        <div className="rounded-lg px-6 pb-4 md:pt-16 pt-12 mt-6 lg:flex justify-between items-center lg:pt-[80px] ">
           <div className="w-full lg:w-[400px]">
             <p className="font-[600] text-base leading-5 font-inter text-text-color">
               Hi, i am
@@ -25,12 +25,12 @@ function HomepageHeroSection() {
             </p>
             <div className=" flex items-center gap-[16px] mt-4">
               <button
-                className={`px-4 py-2 text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-blue-text text-text-color-two rounded-full`}
+                className={`px-4 py-2 text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-blue-text text-text-color-two rounded-full`}
               >
                 Get in Touch
               </button>
               <button
-                className={`px-4 py-2 text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-text-color-two text-btn-text-color rounded-full`}
+                className={`px-4 py-2 text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-text-color-two text-btn-text-color rounded-full`}
               >
                 View Projects
               </button>
