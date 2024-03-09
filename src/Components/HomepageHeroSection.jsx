@@ -16,12 +16,18 @@ function HomepageHeroSection() {
               Oluwaseun Sodeeq
             </h2>
             <h4 className="text-text-color font-bold text-xl text-inter leading-5 mt-[16px]">
-              Frontend Developer
+              A Frontend Developer
             </h4>
             <p className="text-text-color font-medium text-base text-outfit leading-6 mt-[16px]">
-              Devoted Frontend Developer, channeling passion into the creation
+              driven by the thrill of crafting seamless, intuitive user
+              experiences. My passion for precision coding and design finesse
+              ensures every project I undertake captivates and engages its
+              audience. From translating complex concepts into elegant
+              interfaces to staying ahead of emerging trends, I&#39;m committed
+              to delivering not just functional, but future-proof solutions.
+              {/* Devoted Frontend Developer, channeling passion into the creation
               of seamless, intuitive user experiences through meticulous coding
-              and a keen eye for design
+              and a keen eye for design */}
             </p>
             <div className=" flex items-center gap-[16px] mt-4">
               <button
