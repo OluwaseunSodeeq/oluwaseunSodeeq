@@ -82,7 +82,7 @@ function Footer() {
   ];
 
   return (
-    <div className="bg-text-color border-[2px] border-t-content-color mt-5 md:px-[40px]">
+    <div className="bg-text-color border-[2px] border-t-content-color mt-5 md:px-[40px] lg:max-w-[1440px] lg:mx-auto">
       <div className=" pt-8 px-8 pb-6 mt-1 lg:px-[104px] lg:py-8 md:flex md:justify-between md:items-start lg:w-full lg:max-w-[1440px] lg:mx-auto ">
         <p className="text-plain-white text-lg tracking-widest font-Helvetica lg:text-2xl text-nowrap">
           Thanks For Stopping by 👋

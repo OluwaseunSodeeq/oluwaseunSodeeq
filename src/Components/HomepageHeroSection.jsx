@@ -31,18 +31,18 @@ function HomepageHeroSection() {
             </p>
             <div className=" flex items-center gap-[16px] mt-4 lg:mt-[58px]">
               <button
-                className={`px-4 py-2 text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-blue-text text-text-color-two rounded-[8px]`}
+                className={`px-3 md:px-4 py-2 text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-blue-text text-text-color-two rounded-[8px]`}
               >
                 Get in Touch
               </button>
               <button
-                className={`px-4 py-2 text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-text-color-two text-btn-text-color rounded-[8px]`}
+                className={`px-3 md:px-4 py-2 text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-text-color-two text-btn-text-color rounded-[8px]`}
               >
                 View Projects
               </button>
             </div>
           </div>
-          <div className="w-full flex items-center justify-center lg:w-[520px] lg:h-[438px] pb-[48px] lg:mt-[72px] h-auto pt-0 lg:border lg:rounded-full">
+          <div className="w-full flex items-center justify-center lg:w-[520px] lg:h-[438px] pb-[48px] lg:mt-[72px] h-auto pt-0 lg:border lg:rounded-full xl:h-[475px]">
             <Earth />
           </div>
         </div>

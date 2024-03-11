@@ -11,7 +11,8 @@ function Projects() {
   const projectSliderItems = [
     {
       images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
-      eachBg: "",
+      // projBg: "#F4F9FB",
+      projBg: "#000000",
       tech: "",
       title: "BES",
       aboutProject:
@@ -21,7 +22,7 @@ function Projects() {
     },
     {
       images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
-      eachBg: "",
+      projBg: "#F8FEF9",
       tech: "",
       title: "BES",
       aboutProject:
@@ -31,7 +32,7 @@ function Projects() {
     },
     {
       images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
-      eachBg: "",
+      projBg: "#F4F9FB",
       tech: "",
       title: "BES",
       aboutProject:
@@ -56,7 +57,7 @@ function Projects() {
       <>
         <ul className="slick-dots"></ul>
         <ul
-          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-23px] md:bottom-[-40px] lg:bottom-[-30px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
+          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-30px] md:bottom-[-40px] lg:bottom-[-30px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
         >
           {dots.map((dot, index) => (
             <li
@@ -78,25 +79,31 @@ function Projects() {
     // <Container>
     <div className="px-4 lg:px-0">
       <ContentContainer>
-        <h4 className="  font-[600] font-outfit leading-10 text-3xl text-text-color ">
+        <h4 className="  font-[600] font-inter leading-10 text-3xl text-text-color ">
           My Last 3 projects
         </h4>
       </ContentContainer>
 
       <div className="mt-[22px]">
         {projectSliderItems.map((each, ind) => {
-          const { eachBg, images, title, aboutProject, logo, tools } = each;
+          const { projBg, images, title, aboutProject, logo, tools } = each;
+          console.log(projBg);
 
           return (
-            <div key={ind} className={` bg-${eachBg}`}>
+            // <div key={ind} className={"border bg-" + projBg}>
+            <div
+              key={ind}
+              className="border lg:max-w-[1440px] lg:mx-auto"
+              style={{ backgroundColor: projBg }}
+            >
               <ContentContainer>
                 <div
                   className={`flex flex-col gap-y-5 md:gap-y-0 md:justify-between ${
                     (ind + 1) % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-                  } `}
+                  }`}
                 >
                   {/* <div className="p-6 h-auto md:w-[310px] lg:w-[600px] lg:h-[509px] md:max-h-auto border-[2px] rounded-[16px]"> */}
-                  <div className="p-6 h-auto md:w-[310px] md:h-[310px] lg:w-[540px] lg:h-[500px] md:max-h-auto border-[2px] rounded-[16px]">
+                  <div className="p-6 md:px-2 lg:pb-6 h-auto md:w-[310px] md:h-[310px] lg:w-[540px] lg:h-[500px] md:max-h-auto  rounded-[16px]">
                     <div className="w-[46px] h-[47px] lg:w-[73px] lg:h-[73px] lg:mt-2 ">
                       <img src={logo} alt={title} />
                     </div>

@@ -1,9 +1,13 @@
 import { useForm } from "react-hook-form";
+import { useSubmit } from "@formspree/react";
 import ContentContainer from "../Ui/ContentContainer";
 import Error from "../Ui/Error";
-// import Earth from "./Earth";
+import toast from "react-hot-toast";
 
 function ContactHeroSection() {
+  const textRegex = /^[A-Za-z]+(?:\s+[A-Za-z]+)*$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   const contactArray = [
     {
       icon: (
@@ -106,14 +110,37 @@ function ContactHeroSection() {
     },
   ];
 
-  // const { register, handleSubmit, reset,getValues.name,formSTtate } = useForm();  to read error and to get value of ecah input
   const { register, handleSubmit, reset, formState } = useForm();
-  const { errors } = formState;
+  const { errors, isSubmitting } = formState;
+  // const { submit } = useSubmit("xkndzqra");
+  const submitForm = useSubmit("xkndzqra");
+  // console.log(submit);
+  // https://formspree.io/f/xkndzqra
+
   const contactDatahandler = function (data) {
     console.log(data);
+    if (!data) return;
+    submitForm(data);
+    // toast.success("Contact successfully sent!");
+    // submitForm(data).then((response) => {
+    //   console.log(response.ok);
+    //   if (response.ok) {
+    //     toast.success("Form submitted successfully");
+    //     reset();
+
+    //     // Handle successful submission
+    //   } else {
+    //     toast.error("Form submission failed:", response);
+    //     // Handle submission failure
+    //   }
+    // });
+    toast.success("Form submitted successfully");
   };
-  const onError = (error) => console.log(error);
-  console.log(onError, reset);
+  const onError = (error) => {
+    console.log(error);
+    toast.error(error.message || "Kindly fill the form correctly");
+  };
+  // console.log(onError, reset);
   return (
     <ContentContainer background="#ffffff">
       <div className="lg:pt-[130px] md:px-[60px] px-4 pt-24">
@@ -145,7 +172,9 @@ function ContactHeroSection() {
             ))}
           </div>
           <form
-            className="lg:w-[644px] "
+            // action="https://formspree.io/f/xkndzqra"
+            // method="POST"
+            className="lg:w-[644px]"
             onSubmit={handleSubmit(contactDatahandler, onError)}
           >
             <div className="w-full ">
@@ -157,8 +186,14 @@ function ContactHeroSection() {
                     placeholder="Name"
                     name="name"
                     id="name"
+                    style={{
+                      outlineColor: errors.name ? "red" : "initial",
+                    }}
                     {...register("name", {
                       required: "This field is required",
+                      validate: (value) =>
+                        (value.trim() && textRegex.test(value)) ||
+                        "Please enter only letters (no numbers or symbols).",
                     })}
                   />
                   {errors?.name?.message && (
@@ -167,97 +202,79 @@ function ContactHeroSection() {
                 </div>
               </div>
               <div className="mt-2 flex flex-col gap-y-4 lg:gap-y-0 lg:gap-x-3 lg:flex-row">
-                <input
-                  className="w-full py-2 lg:py-4  pl-2 focus:outline-btn-text-color bg-text-color-two rounded-[8px] block "
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  id="email"
-                  {...register("email", {
-                    // required: "This field is required",
-                    validate: (value) => value.length > 3 || "error message",
-                  })}
-                />
-                {/* a way to display form validation error */}
-                {/* {errors?.name?.message && <Error>{errors.name.message}</Error>} */}
+                <div className="lg:w-[50%]">
+                  <input
+                    className="w-full  py-2 lg:py-4  pl-2 focus:outline-btn-text-color bg-text-color-two rounded-[8px] block "
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    id="email"
+                    {...register("email", {
+                      required: "This field is required",
 
-                <input
-                  className="w-full py-2 lg:py-4  pl-2 focus:outline-btn-text-color bg-text-color-two rounded-[8px] block "
-                  type="text"
-                  placeholder="Subject"
-                  name="subject"
-                  id="subject"
-                  {...register("subject", {
-                    required: "This field is required",
-                    min: {
-                      value: 3,
-                      // message: "subject should be more than three letters",
-                      message: "subject should be more than three letters",
-                    },
-                  })}
-                />
+                      validate: (value) =>
+                        (value.trim().endsWith("@gmail.com") && emailRegex) ||
+                        "Please enter a valid email address.",
+                    })}
+                  />
+                  {/* a way to display form validation error */}
+                  {errors?.email?.message && (
+                    <Error>{errors.email.message}</Error>
+                  )}
+                </div>
+                <div className="lg:w-[50%]">
+                  <input
+                    className="w-full py-2 lg:py-4  pl-2 focus:outline-btn-text-color bg-text-color-two rounded-[8px] block "
+                    type="text"
+                    placeholder="Subject"
+                    name="subject"
+                    id="subject"
+                    style={{
+                      outlineColor: errors.name ? "red" : "initial",
+                    }}
+                    {...register("subject", {
+                      required: "This field is required",
+                      validate: (value) =>
+                        (value.trim() && textRegex.test(value)) ||
+                        "Please enter only letters (no numbers or symbols).",
+                    })}
+                  />
+                  {errors?.subject?.message && (
+                    <Error>{errors.subject.message}</Error>
+                  )}
+                </div>
               </div>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
                 cols="50"
-                {...register("message", { required: "This field is required" })}
-                placeholder="Type your message here..."
-                className="w-full py-2 lg:py-4 focus:outline-btn-text-color  pl-2 bg-text-color-two rounded-[8px] block mt-3"
+                style={{
+                  outlineColor: errors.userMessage ? "red" : "initial",
+                }}
+                {...register("userMessage", {
+                  required: "This field is required",
+                  minLength: {
+                    value: 4,
+                    message: "This field cannot be empty",
+                  },
+                })}
+                className="w-full bg-text-color-two mt-2 lg:h-[150px]"
               />
+              {errors?.userMessage?.message && (
+                <Error>{errors.userMessage.message}</Error>
+              )}
             </div>
             <div className="mt-3 lg:mt-5">
               <button
                 className="w-full py-2 lg:py-3 lg:text-[18px] bg-blue-text border-2 hover:border-white text-white rounded-full block cursor-pointer hover:tracking-widest  transition-all duration-500 "
                 type="submit"
               >
-                Send Message
+                {isSubmitting ? "Submitting..." : "Send Message"}
               </button>
             </div>
           </form>
         </div>
-
-        {/* <div>
-          <svg viewBox="0 0 300 200">
-            <path
-              className="opacity: 1; transition: all 0.3s linear 0.8s;"
-              // className="path"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              d="M 0 18 H 500"
-            ></path>
-            <path
-              className="opacity: 1; transition: all 0.3s linear 1.1s;"
-              // className="path"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              d="M 0 18 H 80 V 68 H 500"
-            ></path>
-            <path
-              className="opacity: 1; transition: all 0.3s linear 1.4s;"
-              // className="path"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              d="M 0 18 H 80 V 118 H 500"
-            ></path>
-            <path
-              className="opacity: 1; transition: all 0.3s linear 1.7s;"
-              // className="path"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              d="M 0 18 H 80 V 168 H 500"
-            ></path>
-          </svg>
-          ;
-        </div> */}
-        {/* <div>
-          <Earth />
-        </div> */}
       </div>
     </ContentContainer>
   );

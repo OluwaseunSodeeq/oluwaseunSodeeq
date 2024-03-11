@@ -5,6 +5,7 @@ import Contact from "./Components/Pages/Contact";
 import Homepage from "./Components/Pages/Homepage";
 import About from "./Components/Pages/About";
 import { OpenContextProvider } from "./Components/Contexts/OpenContext";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -17,29 +18,30 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </BrowserRouter>
-        {/* <Footer /> */}
+        <Toaster
+          position="top-center"
+          gutter={12}
+          containerStyle={{ margin: "8px" }}
+          toastOptions={{
+            success: {
+              duration: 3000,
+            },
+            error: {
+              duration: 5000,
+            },
+            style: {
+              fontSize: "16px",
+              maxWidth: "500px",
+              padding: "8px 12px",
+              backgroundColor: "#ffffff",
+              color: "#333437",
+              // color:"#67696E"
+            },
+          }}
+        />
       </OpenContextProvider>
     </div>
   );
 }
 
 export default App;
-
-// import { OpenContextProvider } from "./Components/Contexts/OpenContext";
-// import Contact from "./Components/Pages/Contact";
-// // import About from "./Components/Pages/About";
-// // import Homepage from "./Components/Pages/Homepage";
-
-// function App() {
-//   return (
-//     <div className="">
-//       <OpenContextProvider>
-//         {/* <Homepage /> */}
-//         {/* <About /> */}
-//         <Contact />
-//       </OpenContextProvider>
-//     </div>
-//   );
-// }
-
-// export default App;
