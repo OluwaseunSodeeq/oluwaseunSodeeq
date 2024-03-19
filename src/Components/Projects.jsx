@@ -11,34 +11,43 @@ function Projects() {
   const projectSliderItems = [
     {
       images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
-      // projBg: "#F4F9FB",
-      projBg: "#000000",
-      tech: "",
-      title: "BES",
-      aboutProject:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit.Neque nisi iure eveniet quo vitae illo nesciun suscipit, earum exercitationem explicabo obcaeconsequuntur reiciendis, voluptatem ratione rem eaque.",
-      tools: "React - query, Css component, Context Api",
-      logo: "../besLogo.png",
-    },
-    {
-      images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
       projBg: "#F8FEF9",
       tech: "",
       title: "BES",
       aboutProject:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elitNeque nisi iure eveniet quo vitae illo nesciun suscipit, earum exercitationem explicabo obcaeconsequuntur reiciendis, voluptatem ratione rem eaque.",
-      tools: "React - query, Css component, Context Api",
-      logo: "",
+        " Lorem ipsum, dolor sit amet consectetur adipisicing elit.Neque nisi iure eveniet quo vitae illo nesciun suscipit, earum exercitationem explicabo obcaeconsequuntur reiciendis, voluptatem ratione rem eaque.",
+      tools: "Css Modules, Context api,React Router, Hooks",
+      logo: "../besLogo.png",
+      borderBg: {
+        background:
+          "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
+      },
     },
     {
       images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
-      projBg: "#F4F9FB",
+      projBg: "#F7F7F7",
       tech: "",
-      title: "BES",
+      title: "AJ-portfolio",
       aboutProject:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit.Neque nisi iure eveniet quo vitae illo nesciun suscipit, earum exercitationem explicabo obcaeconsequuntur reiciendis, voluptatem ratione rem eaque.",
-      tools: "React - query, Css component, Context Api",
-      logo: "",
+        " Lorem ipsum, dolor sit amet consectetur adipisicing elitNeque nisi iure eveniet quo vitae illo nesciun suscipit, earum exercitationem explicabo obcaeconsequuntur reiciendis, voluptatem ratione rem eaque.",
+      tools: "Tailwind css, React-router, Context Api",
+      logo: "../aj-logo.png",
+      borderBg: {
+        background: "linear-gradient(180deg, #CED3DC 0%, #67696E 100%)",
+      },
+    },
+    {
+      images: ["../ip-tracker-pic.png", "../ip-tracker-pic.png"],
+      projBg: "#FEFEFE",
+      tech: "",
+      title: "IP-Address-Tracker",
+      aboutProject:
+        " This is a dynamic website developed using HTML,CSS and JavaScript, inspired by a challenge from Frontend Mentor. This website effortlessly fetches and displays location, ISP, timezone, and current IP address information based on user input, complete with robust error handling for incorrect entries.",
+      tools: "Html,Css and JavaScript",
+      logo: "../fontendMentor-Logo.png",
+      borderBg: {
+        background: "linear-gradient(180deg, #CED3DC 0%, #5B7BE4 100%)",
+      },
     },
   ];
 
@@ -57,7 +66,7 @@ function Projects() {
       <>
         <ul className="slick-dots"></ul>
         <ul
-          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-30px] md:bottom-[-40px] lg:bottom-[-30px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
+          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-26px] md:bottom-[-25px] lg:bottom-[-30px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
         >
           {dots.map((dot, index) => (
             <li
@@ -76,24 +85,23 @@ function Projects() {
     ),
   };
   return (
-    // <Container>
-    <div className="px-4 lg:px-0">
+    <div className="py-4 h-auto bg-plain-white lg:px-0  ">
       <ContentContainer>
-        <h4 className="  font-[600] font-inter leading-10 text-3xl text-text-color ">
+        <h4 className=" ml-6 md:ml-0  font-[600] font-inter leading-10 text-3xl text-text-color ">
           My Last 3 projects
         </h4>
       </ContentContainer>
 
       <div className="mt-[22px]">
         {projectSliderItems.map((each, ind) => {
-          const { projBg, images, title, aboutProject, logo, tools } = each;
-          console.log(projBg);
+          const { projBg, images, title, aboutProject, logo, tools, borderBg } =
+            each;
 
           return (
             // <div key={ind} className={"border bg-" + projBg}>
             <div
               key={ind}
-              className="border lg:max-w-[1440px] lg:mx-auto"
+              className="border lg:max-w-[1440px] lg:mx-auto pb-[24px]"
               style={{ backgroundColor: projBg }}
             >
               <ContentContainer>
@@ -103,8 +111,14 @@ function Projects() {
                   }`}
                 >
                   {/* <div className="p-6 h-auto md:w-[310px] lg:w-[600px] lg:h-[509px] md:max-h-auto border-[2px] rounded-[16px]"> */}
-                  <div className="p-6 md:px-2 lg:pb-6 h-auto md:w-[310px] md:h-[310px] lg:w-[540px] lg:h-[500px] md:max-h-auto  rounded-[16px]">
-                    <div className="w-[46px] h-[47px] lg:w-[73px] lg:h-[73px] lg:mt-2 ">
+                  <div className="p-6 md:px-2 lg:pb-6 h-auto md:w-[310px] md:h-[310px]  lg:w-[540px] lg:h-[500px] md:max-h-auto  rounded-[16px]">
+                    <div
+                      className={`${
+                        title !== "IP-Address-Tracker"
+                          ? "w-[47px] lg:w-[73px] "
+                          : "w-auto"
+                      } h-[47px] lg:h-[73px] lg:mt-2 `}
+                    >
                       <img src={logo} alt={title} />
                     </div>
                     <p className=" block text-base font-normal leading-6 font-inter text-btn-text-color mt-4 md:hidden lg:block lg:mt-6  ">
@@ -112,7 +126,11 @@ function Projects() {
                     </p>
                     <div className="flex gap-x-3 mt-4 md:mt-8 lg:mt-6">
                       <h4 className="flex gap-x-1 font-inter font-medium lg:text-[20px]">
-                        <span className="text-btn-text-color ">Tools </span>
+                        <span className="text-btn-text-color ">
+                          {title !== "IP-Address-Tracker"
+                            ? "Tools"
+                            : "Technologies"}{" "}
+                        </span>
                         <span className="mt-2 lg:ml-2 text-[18px] ">
                           <svg
                             width="12"
@@ -147,26 +165,26 @@ function Projects() {
                       </button>
                     </div>
                   </div>
-                  <div
-                    className=" relative flex items-center justify-center  w-full h-[295px]  md:w-[310px] md:h-auto lg:w-[540px] lg:h-[500px] rounded-[16px]  p-6 md:p-8  lg:p-[40px] "
-                    style={{
-                      background:
-                        "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
-                    }}
-                  >
-                    <div className="relative z-10 w-full mx-auto my-4">
-                      {
-                        <Slider {...settings}>
-                          {images.map((each, i) => (
-                            <img
-                              key={i}
-                              className="w-inherit md:h-full lg:w-[480px] lg:h-[420px] cursor-grab rounded-xl"
-                              src={each}
-                              alt="projects"
-                            />
-                          ))}
-                        </Slider>
-                      }
+                  <div className="px-6 md:px-0">
+                    <div
+                      className=" relative flex items-center justify-center  w-full h-[295px]  md:w-[310px] md:h-[310px] lg:w-[540px] lg:h-[500px] rounded-[16px]   md:p-8  lg:p-[40px] "
+                      style={borderBg}
+                    >
+                      <div className="absolute z-10 px-6  w-full mx-auto my-4 rounded-[16px]">
+                        {
+                          <Slider {...settings}>
+                            {images.map((each, i) => (
+                              // console.log(each, i)
+                              <img
+                                key={i}
+                                className="w-full h-[240px]  md:h-[260px]  lg:max-w-[480px] lg:h-[420px] cursor-grab rounded-[16px]"
+                                src={each}
+                                alt="projects"
+                              />
+                            ))}
+                          </Slider>
+                        }
+                      </div>
                     </div>
                   </div>
                   <div className="w-full flex justify-end pr-6 md:hidden">
@@ -181,7 +199,6 @@ function Projects() {
         })}
       </div>
     </div>
-    // </Container>
   );
 }
 

@@ -12,7 +12,7 @@ const Earth = () => {
   return (
     // <div className="relative mt-12 w-[300px] h-[300px] mx-auto lg:w-[420px]  lg:h-[420px] md:border  flex items-center  rounded-full">
     <div
-      className={`relative  p-1 md:p-4 md:pl-1 mt-12  md:mx-auto md:w-[420px]  md:h-[420px] lg:w-[430px]  lg:h-[430px] lg:max-h-[40px] border  flex items-center  rounded-full lg:rounded-none lg:border-none ${
+      className={`relative  p-1 md:p-4 md:pl-1 mt-12  md:mx-auto md:w-[420px]  md:h-[420px] lg:w-[430px]  lg:h-[435px] lg:max-h-[450px] border  flex items-center  rounded-full lg:rounded-none lg:border-none ${
         check ? "w-[327px] h-[327px]" : "w-[320px] h-[320px]"
       } ${check2 ? "ml-[0px]" : "ml-[-18px]"}`}
     >

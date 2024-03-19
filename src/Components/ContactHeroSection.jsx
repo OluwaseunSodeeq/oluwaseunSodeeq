@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 function ContactHeroSection() {
   const textRegex = /^[A-Za-z]+(?:\s+[A-Za-z]+)*$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const formID = "xkndzqra";
 
   const contactArray = [
     {
@@ -112,35 +113,18 @@ function ContactHeroSection() {
 
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors, isSubmitting } = formState;
-  // const { submit } = useSubmit("xkndzqra");
-  const submitForm = useSubmit("xkndzqra");
-  // console.log(submit);
+  const submitForm = useSubmit(formID);
   // https://formspree.io/f/xkndzqra
-
   const contactDatahandler = function (data) {
     console.log(data);
     if (!data) return;
     submitForm(data);
-    // toast.success("Contact successfully sent!");
-    // submitForm(data).then((response) => {
-    //   console.log(response.ok);
-    //   if (response.ok) {
-    //     toast.success("Form submitted successfully");
-    //     reset();
-
-    //     // Handle successful submission
-    //   } else {
-    //     toast.error("Form submission failed:", response);
-    //     // Handle submission failure
-    //   }
-    // });
+    reset();
     toast.success("Form submitted successfully");
   };
   const onError = (error) => {
-    console.log(error);
     toast.error(error.message || "Kindly fill the form correctly");
   };
-  // console.log(onError, reset);
   return (
     <ContentContainer background="#ffffff">
       <div className="lg:pt-[130px] md:px-[60px] px-4 pt-24">
@@ -172,8 +156,6 @@ function ContactHeroSection() {
             ))}
           </div>
           <form
-            // action="https://formspree.io/f/xkndzqra"
-            // method="POST"
             className="lg:w-[644px]"
             onSubmit={handleSubmit(contactDatahandler, onError)}
           >
@@ -214,10 +196,9 @@ function ContactHeroSection() {
 
                       validate: (value) =>
                         (value.trim().endsWith("@gmail.com") && emailRegex) ||
-                        "Please enter a valid email address.",
+                        "Please input a valid email",
                     })}
                   />
-                  {/* a way to display form validation error */}
                   {errors?.email?.message && (
                     <Error>{errors.email.message}</Error>
                   )}

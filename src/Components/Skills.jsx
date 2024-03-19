@@ -1,4 +1,5 @@
 import ContentContainer from "../Ui/ContentContainer";
+import SubSectionUnderline from "./SubSectionUnderline";
 
 function Skills() {
   const skillsArray = [
@@ -11,25 +12,21 @@ function Skills() {
   ];
   const maxPercent = 10;
   return (
-    <ContentContainer>
-      <div className=" lg:flex lg:justify-center lg:items-center gap-x-[72px] mt-[-30px]">
+    <ContentContainer background="#ffffff">
+      <div className="px-6 py-12 lg:flex lg:justify-center lg:items-center gap-x-[72px] mt-[-30px]">
         <div className="hidden lg:block w-[420px] h-[441px]">
           <img src="../skillpic.png" alt="Oluwaseun Sodeeq" />
         </div>
-        <div className="px-6 py-10 lg:w-[650px]">
+        <div className=" lg:w-[650px]">
           <div>
-            <h4 className="text-blue-text text-base font-normal leading-6 font-outfit">
+            <h4 className="text-blue-text text-base font-medium leading-6 font-inter">
               Skills
             </h4>
-            <h2 className="font-outfit text-3xl lg:text-5xl lg:mt-3 leading-[56px] font-bold text-btn-text-color">
-              What I&apos;m good @
+            <h2 className="font-inter text-[26px] md:text-3xl  lg:text-5xl lg:mt-3 leading-[56px] font-bold text-btn-text-color">
+              What I&apos;m Good @
             </h2>
-            <div className="flex gap-[10px] -mt-[10px] lg:mt-2">
-              <div className="bg-blue-text h-[2px] w-[75px] lg:w-[120px]"></div>
-              <div className="bg-blue-text h-[2px] w-[20px]"></div>
-              <div className="bg-blue-text h-[2px] w-[20px]"></div>
-            </div>
-            <p className="text-base md:text-[18px] leading-6 font-normal font-outfit text-btn-text-color mt-4">
+            <SubSectionUnderline />
+            <p className=" text-[14px] md:text-base md:text-[18px] leading-5 md:leading-6 font-normal font-outfit text-btn-text-color mt-4">
               As a web developer, I blend creativity and technical expertise to
               craft captivating and user-friendly websites. I bring a commitment
               to cutting-edge technologies and a keen eye for design, ensuring
@@ -40,12 +37,12 @@ function Skills() {
           <div className="shadow-custom pb-4 lg:pb-2">
             <div className="mt-6 pb-4   pt-4 px-4 rounded-[16px]  lg:flex lg:flex-wrap  lg:gap-x-[40px] ">
               {skillsArray.map((each) => (
-                <div key={each.skill} className="mt-3 md:mt-5 md:pb-0 lg:mt-2 ">
-                  <h5 className="text-btn-text-color text-base font-quicksand leading-5 font-normal md:text-[18px] lg:text-base">
+                <div key={each.skill} className="mt-3 md:pb-0 lg:mt-2 ">
+                  <h5 className="text-btn-text-color text-[14px] md:text-base lg:text-[18px] font-quicksand leading-5 font-normal ">
                     {each.skill}
                   </h5>
-                  <div className="flex gap-3 items-center md:mt-2">
-                    <div className="w-[262px] md:w-[500px] lg:w-[210px] relative border-btn-text-color  border  py-[2px]   pl-[2px] lg:pl-[1px] pr-[1px] lg:h-[17px] lg:py-[1px]">
+                  <div className="flex gap-3 items-center lg:mt-2">
+                    <div className="w-[262px] md:w-[500px] lg:w-[210px] relative border-btn-text-color  border py-[2px] pl-[2px] lg:pl-[1px] pr-[1px] lg:h-[17px] lg:py-[1px]">
                       <div className="w-full bg-plain-white relative z-20 flex items-center gap-[2px] ">
                         {Array.from({ length: maxPercent }, (_, i) => (
                           <div
