@@ -15,8 +15,8 @@ function Projects() {
       tech: "",
       title: "BES",
       aboutProject:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit.Neque nisi iure eveniet quo vitae illo nesciun suscipit, earum exercitationem explicabo obcaeconsequuntur reiciendis, voluptatem ratione rem eaque.",
-      tools: "Css Modules, Context api,React Router, Hooks",
+        "BES is a meticulously crafted website highlighting its comprehensive range of services and commitment to excellence. Explore our office location and connect with us effortlessly through our user-friendly contact form, ensuring seamless communication for potential clients. Dive into our latest project showcase to witness our innovative solutions and dedication to delivering exceptional results firsthand.",
+      tools: "CSS Modules, Context api, React Router, Hooks",
       logo: "../besLogo.png",
       borderBg: {
         background:
@@ -29,9 +29,9 @@ function Projects() {
       tech: "",
       title: "AJ-portfolio",
       aboutProject:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elitNeque nisi iure eveniet quo vitae illo nesciun suscipit, earum exercitationem explicabo obcaeconsequuntur reiciendis, voluptatem ratione rem eaque.",
-      tools: "Tailwind css, React-router, Context Api",
-      logo: "../aj-logo.png",
+        " AJ's portfolio website highlights the expertise of a skilled product designer, showcasing recent projects and capabilities. Employers can easily connect with AJ via a user-friendly contact form for potential collaborations. Explore the latest project page for insights into AJ's innovative solutions and commitment to excellence in product design.",
+      tools: "Tailwind css, React-router, Context Api, Hooks",
+      logo: "../aj-logo.svg",
       borderBg: {
         background: "linear-gradient(180deg, #CED3DC 0%, #67696E 100%)",
       },
@@ -66,7 +66,7 @@ function Projects() {
       <>
         <ul className="slick-dots"></ul>
         <ul
-          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-26px] md:bottom-[-25px] lg:bottom-[-30px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
+          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-26px] md:bottom-[-28px] lg:bottom-[-30px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
         >
           {dots.map((dot, index) => (
             <li
@@ -101,7 +101,7 @@ function Projects() {
             // <div key={ind} className={"border bg-" + projBg}>
             <div
               key={ind}
-              className="border lg:max-w-[1440px] lg:mx-auto pb-[24px]"
+              className=" lg:max-w-[1440px] lg:mx-auto pb-[24px]"
               style={{ backgroundColor: projBg }}
             >
               <ContentContainer>
@@ -167,17 +167,18 @@ function Projects() {
                   </div>
                   <div className="px-6 md:px-0">
                     <div
-                      className=" relative flex items-center justify-center  w-full h-[295px]  md:w-[310px] md:h-[310px] lg:w-[540px] lg:h-[500px] rounded-[16px]   md:p-8  lg:p-[40px] "
+                      className=" relative z-10 flex items-center justify-center  w-full h-[295px]  md:w-[310px] md:h-[310px] lg:w-[540px] lg:h-[500px] rounded-[16px]   md:p-8  lg:p-[40px] "
                       style={borderBg}
                     >
-                      <div className="absolute z-10 px-6  w-full mx-auto my-4 rounded-[16px]">
+                      <div className="absolute w-full z-10 px-6 lg:px-8  mx-auto my-4  ">
+                        {/* <div className="w-full absolute z-20 inset-0 flex justify-center items-center rounded-[16px]"> */}
                         {
                           <Slider {...settings}>
                             {images.map((each, i) => (
                               // console.log(each, i)
                               <img
                                 key={i}
-                                className="w-full h-[240px]  md:h-[260px]  lg:max-w-[480px] lg:h-[420px] cursor-grab rounded-[16px]"
+                                className="w-full h-[240px] md:h-[245px] md:p-[1px]   lg:max-w-[480px] lg:h-[420px] cursor-grab rounded-[16px]"
                                 src={each}
                                 alt="projects"
                               />

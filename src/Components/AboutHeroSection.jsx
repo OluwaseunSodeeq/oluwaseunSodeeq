@@ -36,19 +36,19 @@ function AboutHeroSection() {
 
   return (
     <ContentContainer>
-      <div className="w-full  lg:flex justify-between gap-x-10 lg:pt-[120px]  md:px-[40px] lg:px-0 pt-24 border">
-        <div className="w-[105%] ml-[-2.5%] md:ml-0 h-[345px] md:h-[500px] md:w-full lg:w-[580px] lg:max-w-[590px] lg:h-[620px]">
+      <div className="w-full  lg:flex justify-between gap-x-10 lg:pt-[120px]  md:px-[40px] lg:px-0 pt-24 ">
+        <div className="w-full px-6 lg:px-0 md:ml-0 h-[345px] md:h-[500px] md:w-full lg:w-[590px] lg:max-w-[595px] lg:h-[620px]">
           <img
             src="../aboutPic.png"
             alt="Oluwaseun Sodeeq"
             className=" w-full h-full"
           />
         </div>
-        <div className="lg:w-[580px] lg:max-w-[590px] h-auto lg:-mt-7 px-4 lg:px-0 border ">
-          <h2 className="font-outfit font-bold text-[30px] md:text-[38px] lg:text-[48px] lg:leading-[60px] leading-[46px] text-text-color mt-5">
+        <div className="lg:w-[580px] lg:max-w-[590px] h-auto lg:-mt-7 px-6 lg:px-0">
+          <h2 className="font-inter font-bold text-[32px] md:text-[38px] lg:text-[48px] lg:leading-[60px] leading-[48px] text-text-color mt-5">
             OLUWASEUN SODEEQ
           </h2>
-          <h6 className="font-normal font-outfit text-2xl md:text-[30px] lg:text-[32px] leading-9 lg:leading-[48px] text-text-color">
+          <h6 className="font-medium font-inter text-2xl md:text-[30px] lg:text-[32px] leading-9 lg:leading-[48px] text-text-color ">
             Frontend Developer
           </h6>
 
@@ -56,13 +56,13 @@ function AboutHeroSection() {
             {contactContent.map((each) => {
               const { title, text } = each;
               return (
-                <div key={title} className="lg:mt-6">
-                  <h6 className="text-base font-bold leading-6 font-outfit text-text-color bg-text-color-two pr-2 w-[143px] py-1 ">
+                <div key={title} className="mt-6 ">
+                  <h6 className="text-base font-bold leading-6 font-outfit text-btn-text-color bg-text-color-two pr-2 w-[143px] py-1 ">
                     {title}
                   </h6>
                   <div
                     className={
-                      "font-normal text-base leading-6 font-outfit text-text-color mt-1"
+                      "font-normal text-base leading-6 font-outfit text-btn-text-color mt-1"
                     }
                   >
                     <TypeAnimation

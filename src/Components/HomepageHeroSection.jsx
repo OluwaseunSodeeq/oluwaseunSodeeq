@@ -38,7 +38,14 @@ function HomepageHeroSection() {
               <button
                 className={`px-3 py-2 md:px-4  text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-text-color-two text-btn-text-color rounded-[8px]`}
               >
-                View Projects
+                <a
+                  href="../CV/Oluwaseun_Sodeeq_CV_latest_PDF.pdf" // URL to your CV file
+                  download="Oluwaseun_Sodeeq_CV_latest_PDF.pdf" // Specify the name of the downloaded file
+                  className=""
+                  // onClick={downloadCvHandler}
+                >
+                  Download CV
+                </a>
               </button>
             </div>
           </div>

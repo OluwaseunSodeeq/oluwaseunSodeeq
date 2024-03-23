@@ -8,6 +8,7 @@ function ContactHeroSection() {
   const textRegex = /^[A-Za-z]+(?:\s+[A-Za-z]+)*$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const formID = "xkndzqra";
+  const nameLength = 2;
 
   const contactArray = [
     {
@@ -107,7 +108,10 @@ function ContactHeroSection() {
         </svg>
       ),
       heading: "Email",
-      text: ["ademolaoluwaseun90@gmail.com"],
+      text: [
+        "ademola.oluwaseun.sodeeq@gmail.com",
+        "ademolaoluwaseun90@gmail.com",
+      ],
     },
   ];
 
@@ -163,18 +167,20 @@ function ContactHeroSection() {
               <div className="mt-8">
                 <div>
                   <input
-                    className="w-full py-2 lg:py-4  focus:outline-btn-text-color  pl-2 bg-text-color-two rounded-[8px] block "
+                    className="outline-none border w-full py-2 lg:py-4  focus:border-blue-text  pl-2 bg-text-color-two rounded-[8px] block "
                     type="text"
                     placeholder="Name"
                     name="name"
                     id="name"
                     style={{
-                      outlineColor: errors.name ? "red" : "initial",
+                      outlineColor: errors.name ? "red" : "",
                     }}
                     {...register("name", {
                       required: "This field is required",
                       validate: (value) =>
-                        (value.trim() && textRegex.test(value)) ||
+                        (value.trim() &&
+                          value.trim().length > nameLength &&
+                          textRegex.test(value)) ||
                         "Please enter only letters (no numbers or symbols).",
                     })}
                   />
@@ -186,13 +192,13 @@ function ContactHeroSection() {
               <div className="mt-2 flex flex-col gap-y-4 lg:gap-y-0 lg:gap-x-3 lg:flex-row">
                 <div className="lg:w-[50%]">
                   <input
-                    className="w-full  py-2 lg:py-4  pl-2 focus:outline-btn-text-color bg-text-color-two rounded-[8px] block "
+                    className="w-full  py-2 lg:py-4  pl-2 focus:outline-blue-text bg-text-color-two rounded-[8px] block "
                     type="email"
                     placeholder="Email"
                     name="email"
                     id="email"
                     {...register("email", {
-                      required: "This field is required",
+                      // required: "This field is required",
 
                       validate: (value) =>
                         (value.trim().endsWith("@gmail.com") && emailRegex) ||
@@ -205,13 +211,13 @@ function ContactHeroSection() {
                 </div>
                 <div className="lg:w-[50%]">
                   <input
-                    className="w-full py-2 lg:py-4  pl-2 focus:outline-btn-text-color bg-text-color-two rounded-[8px] block "
+                    className="w-full py-2 lg:py-4  pl-2 focus:outline-blue-text bg-text-color-two rounded-[8px] block "
                     type="text"
                     placeholder="Subject"
                     name="subject"
                     id="subject"
                     style={{
-                      outlineColor: errors.name ? "red" : "initial",
+                      outlineColor: errors.name ? "red" : "",
                     }}
                     {...register("subject", {
                       required: "This field is required",
@@ -231,7 +237,7 @@ function ContactHeroSection() {
                 rows="5"
                 cols="50"
                 style={{
-                  outlineColor: errors.userMessage ? "red" : "initial",
+                  outlineColor: errors.userMessage ? "red" : "",
                 }}
                 {...register("userMessage", {
                   required: "This field is required",
@@ -240,7 +246,7 @@ function ContactHeroSection() {
                     message: "This field cannot be empty",
                   },
                 })}
-                className="w-full bg-text-color-two mt-2 lg:h-[150px]"
+                className="w-full bg-text-color-two mt-2 lg:h-[150px] focus:outline-blue-text "
               />
               {errors?.userMessage?.message && (
                 <Error>{errors.userMessage.message}</Error>
