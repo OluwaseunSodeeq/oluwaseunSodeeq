@@ -1,11 +1,12 @@
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 function ProjectCardCOntent({ each, ind }) {
   const mobilebreakpoint = useMediaQuery({ maxWidth: 450 });
   const tabletbreakpoint = useMediaQuery({ maxWidth: 1024 });
   const desktopbreakpoint = useMediaQuery({ minWidth: 1025 });
 
-  const { title, aboutProject, logo, tools } = each;
+  const { title, aboutProject, logo, tools, url } = each;
   const [setence1, setence2, setence3] = aboutProject;
 
   return (
@@ -60,7 +61,7 @@ function ProjectCardCOntent({ each, ind }) {
                       } `}
       >
         <button className="  px-3 py-2 border rounded-[8px]   bg-blue-text text-plain-white hover:bg-plain-white hover:text-blue-text hover:shadow-custom ">
-          View Website
+          <Link to={url}>View Website</Link>
         </button>
       </div>
     </div>

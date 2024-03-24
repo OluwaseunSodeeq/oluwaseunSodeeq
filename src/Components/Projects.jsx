@@ -8,13 +8,13 @@ import ContentContainer from "../Ui/ContentContainer";
 import ProjectCardCOntent from "./ProjectCardCOntent";
 import ProjectCardSlider from "./ProjectCardSlider";
 import SubsectionsHeader from "./SubsectionsHeader";
+import { Link } from "react-router-dom";
 
 function Projects() {
   const projectSliderItems = [
     {
       images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
       projBg: "#F8FEF9",
-      tech: "",
       title: "BES",
       aboutProject: [
         "BES is a meticulously crafted website highlighting its comprehensive range of services and commitment to excellence.",
@@ -27,6 +27,7 @@ function Projects() {
         background:
           "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
       },
+      url: "https://bes-beta.vercel.app/",
     },
     {
       images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
@@ -43,6 +44,7 @@ function Projects() {
       borderBg: {
         background: "linear-gradient(180deg, #CED3DC 0%, #67696E 100%)",
       },
+      url: "https://abdul-gafar.netlify.app/",
     },
     {
       images: ["../ip-tracker-pic.png", "../ip-tracker-pic.png"],
@@ -59,6 +61,7 @@ function Projects() {
       borderBg: {
         background: "linear-gradient(180deg, #CED3DC 0%, #5B7BE4 100%)",
       },
+      url: "https://oluwaseunsodeeq.github.io/ip-address-tracker",
     },
   ];
 
@@ -108,7 +111,7 @@ function Projects() {
 
       <div className="mt-[22px]">
         {projectSliderItems.map((each, ind) => {
-          const { projBg, images, borderBg } = each;
+          const { projBg, images, borderBg, url } = each;
           return (
             <div
               key={ind}
@@ -127,7 +130,7 @@ function Projects() {
                   />
                   <div className="w-full flex justify-end pr-6 md:hidden">
                     <button className="px-3 py-2 border rounded-[8px] mt-3 bg-blue-text text-plain-white hover:bg-plain-white hover:text-blue-text hover:shadow-custom">
-                      View Website
+                      <Link to={url}>View Website</Link>
                     </button>
                   </div>
                 </div>
