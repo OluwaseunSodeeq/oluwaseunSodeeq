@@ -1,6 +1,6 @@
 import ContentContainer from "../Ui/ContentContainer";
 import Skill from "./Skill";
-import SubSectionUnderline from "./SubSectionUnderline";
+import SubsectionsHeader from "./SubsectionsHeader";
 
 function Skills() {
   const skillsArray = [
@@ -20,13 +20,7 @@ function Skills() {
         </div>
         <div className=" lg:w-[650px]">
           <div>
-            <h4 className="text-blue-text text-base font-medium leading-6 font-inter">
-              Skills
-            </h4>
-            <h2 className="font-inter text-[26px] md:text-3xl  lg:text-5xl lg:mt-3 leading-[56px] font-bold text-btn-text-color">
-              What I&apos;m Good @
-            </h2>
-            <SubSectionUnderline />
+            <SubsectionsHeader title="Skills" header=" What I'm Good @" />
             <p className=" text-[14px] md:text-base md:text-[18px] leading-5 md:leading-6 font-normal font-outfit text-btn-text-color mt-4">
               As a web developer, I blend creativity and technical expertise to
               craft captivating and user-friendly websites. I bring a commitment

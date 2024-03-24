@@ -5,20 +5,19 @@ function AboutHeroSection() {
   const contactContent = [
     {
       title: "Little Bit About Me",
-      text: `After a couple of weeks of frustration, you'll give 
-  up," said a friend. My journey started miles away from lines 
-  of code, deep within the bustling world of a factory worker 
-  (warehouse clerk, to be precise). While my days were filled with 
-  packing and shipping finished goods, my nights were fueled by a 
-  burning passion for web development. Every spare moment was spent 
-  glued to online tutorials, devouring documentation, and building 
-  projects I found interesting. It wasn't easy – the learning 
-  curve was steep, the resources endless, especially because I 
-  didn't know exactly what I needed. There were late nights 
-  debugging code, moments of frustration when things wouldn't 
-  work, and the constant struggle to balance my day job with my 
-  learning. But I persevered, overcame each hurdle, and my skills 
-  grew.`,
+      text: ` "After a couple weeks of frustration, you'll give up," said a friend. My journey started miles away from lines
+      of code, deep within the bustling world of a factory worker
+      (warehouse clerk, to be precise). While my days were filled with
+      packing and shipping finished goods, my nights were fueled by a
+      burning passion for web development. Every spare moment was spent
+      glued to online tutorials, devouring documentation, and building
+      projects I found interesting. It wasn't easy – the learning
+      curve was steep, the resources endless, especially because I
+      didn't know exactly what I needed. There were late nights
+      debugging code, moments of frustration when things wouldn't
+      work, and the constant struggle to balance my day job with my
+      learning. But I persevered, overcame each hurdle, and my skills
+      grew.`,
     },
 
     {
@@ -36,7 +35,7 @@ function AboutHeroSection() {
 
   return (
     <ContentContainer>
-      <div className="w-full  lg:flex justify-between gap-x-10 lg:pt-[120px]  md:px-[40px] lg:px-0 pt-24 ">
+      <div className="w-full  lg:flex justify-between gap-x-10   md:px-[40px] lg:px-0 lg:pt-[150px] px-4 pt-24 lg:pb-12 ">
         <div className="w-full px-6 lg:px-0 md:ml-0 h-[345px] md:h-[500px] md:w-full lg:w-[590px] lg:max-w-[595px] lg:h-[620px]">
           <img
             src="../aboutPic.png"
@@ -57,7 +56,7 @@ function AboutHeroSection() {
               const { title, text } = each;
               return (
                 <div key={title} className="mt-6 ">
-                  <h6 className="text-base font-bold leading-6 font-outfit text-btn-text-color bg-text-color-two pr-2 w-[143px] py-1 ">
+                  <h6 className="inline-block p-4 text-base font-bold leading-5 font-outfit text-btn-text-color bg-text-color-two rounded-md">
                     {title}
                   </h6>
                   <div
@@ -76,9 +75,6 @@ function AboutHeroSection() {
                 </div>
               );
             })}
-
-            {/* <h6 className="text-base font-bold leading-6 font-outfit text-text-color bg-text-color-two pr-2 w-[143px] py-1 mt-5"></h6>
-            <p className="font-normal text-base leading-6 font-outfit text-text-color mt-1"></p> */}
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default {
     screens: {
       sm: "480px",
       md: "768px",
-      lg: "1024px",
+      lg: "1025px",
       xl: "1440px",
     },
     extend: {
@@ -36,9 +36,6 @@ export default {
         gradient:
           "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
       },
-      // backgroundImage: {
-      //   "logo-image": "url('seun.png')",
-      // },
     },
   },
 };

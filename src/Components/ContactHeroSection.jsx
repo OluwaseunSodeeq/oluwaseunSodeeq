@@ -107,7 +107,7 @@ function ContactHeroSection() {
           </defs>
         </svg>
       ),
-      heading: "Email",
+      heading: "Emails:",
       text: [
         "ademola.oluwaseun.sodeeq@gmail.com",
         "ademolaoluwaseun90@gmail.com",
@@ -131,11 +131,11 @@ function ContactHeroSection() {
   };
   return (
     <ContentContainer background="#ffffff">
-      <div className="lg:pt-[130px] md:px-[60px] px-4 pt-24">
+      <div className="lg:pt-[130px] md:px-[60px] px-4 pt-24 lg:pb-12">
         <h3 className="font-bold font-outfit text-2xl leading-8 text-text-color text-center">
           Get In Touch
         </h3>
-        <p className="w-full text-base leading-6 font-normal font-outfit text-center mx-auto mt-2 lg:w-[649px]  lg:px-10 lg:text-[18px] lg:leading-9">
+        <p className="w-full text-base leading-6 font-normal font-outfit text-center mx-auto mt-2 lg:w-[649px]  lg:px-10 lg:text-[18px] lg:leading-9 text-btn-text-color">
           Contact me for projects, collaborations, or inquiries. Let&apos;s
           create something amazing!
         </p>

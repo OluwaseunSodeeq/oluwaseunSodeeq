@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import useOpenContext from "./Contexts/useOpenContext";
 
 function Hamburger() {
