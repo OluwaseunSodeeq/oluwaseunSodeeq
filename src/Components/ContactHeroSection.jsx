@@ -131,7 +131,7 @@ function ContactHeroSection() {
   };
   return (
     <ContentContainer background="#ffffff">
-      <div className="lg:pt-[130px] md:px-[60px] px-4 pt-24 lg:pb-12">
+      <div className="lg:pt-[145px] md:px-[60px] px-4 pt-24 lg:pb-[104px]">
         <h3 className="font-bold font-outfit text-2xl leading-8 text-text-color text-center">
           Get In Touch
         </h3>

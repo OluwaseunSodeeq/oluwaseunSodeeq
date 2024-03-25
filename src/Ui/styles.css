@@ -119,7 +119,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .wheel {
     width: 260px;
     height: 260px;

@@ -82,20 +82,22 @@ function Footer() {
   ];
 
   return (
-    <div className="bg-text-color border-[2px] border-t-content-color mt-5 md:px-[40px] lg:max-w-[1440px] lg:mx-auto rounded-b-[40px] md:rounded-b-[0px]">
-      <div className=" pt-8 px-8 pb-6 mt-1 lg:px-[104px] lg:py-8 md:flex md:justify-between md:items-start lg:w-full lg:max-w-[1440px] lg:mx-auto ">
-        <p className="text-plain-white text-lg tracking-widest font-Helvetica lg:text-2xl text-nowrap">
-          Thanks For Stopping by 👋
-        </p>
-        <div className="flex items-center gap-3 mt-6 md:mt-0">
-          {socialnetwork.map((each, i) => (
-            <p
-              key={i}
-              className="cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
-            >
-              {each.icon}
-            </p>
-          ))}
+    <div className=" w-full bg-text-color p-0">
+      <div className="   mt-5 md:px-[40px] lg:max-w-[1440px] lg:mx-auto rounded-b-[40px] md:rounded-b-[0px]">
+        <div className=" pt-8 px-8 pb-6 mt-1 lg:px-[104px] lg:py-8 md:flex md:justify-between md:items-start lg:w-full lg:max-w-[1440px] lg:mx-auto ">
+          <p className="text-plain-white text-lg tracking-widest font-Helvetica lg:text-2xl text-nowrap">
+            Thanks For Stopping by 👋
+          </p>
+          <div className="flex items-center gap-3 mt-6 md:mt-0">
+            {socialnetwork.map((each, i) => (
+              <p
+                key={i}
+                className="cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
+              >
+                {each.icon}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

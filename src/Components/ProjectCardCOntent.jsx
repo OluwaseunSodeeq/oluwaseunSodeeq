@@ -10,7 +10,7 @@ function ProjectCardCOntent({ each, ind }) {
   const [setence1, setence2, setence3] = aboutProject;
 
   return (
-    <div className="relative  p-6 md:px-2 md-p-2 lg:p-6 h-auto md:w-[310px] md:h-[310px]  lg:w-[560px] lg:max-w-[600px] lg:h-[500px] md:max-h-auto  rounded-[16px] ">
+    <div className="relative  p-6 md:px-2 md-p-2 lg:pl-5 lg:pt-3 lg:pb-3 h-auto md:w-[310px] md:h-[310px] lg:w-[570px] xl:w-[600px] lg:h-[500px] md:max-h-auto  rounded-[16px] ">
       <div
         className={`${
           title !== "IP-Address-Tracker"
@@ -48,7 +48,7 @@ function ProjectCardCOntent({ each, ind }) {
             </svg>
           </span>
         </h4>
-        <h6 className="ml-1 lg:mt-1  lg:ml-2 font-inter italic font-normal text-[14px] md:text-base text-btn-text-color lg:text-[16px]">
+        <h6 className="ml-1 lg:mt-1 lg:ml-2 font-inter italic font-normal text-[14px] md:text-base text-btn-text-color lg:text-[16px]">
           {tools}
         </h6>
       </div>

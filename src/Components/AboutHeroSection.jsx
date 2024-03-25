@@ -35,7 +35,7 @@ function AboutHeroSection() {
 
   return (
     <ContentContainer>
-      <div className="w-full  lg:flex justify-between gap-x-10   md:px-[40px] lg:px-0 lg:pt-[150px] px-4 pt-24 lg:pb-12 ">
+      <div className="w-full  lg:flex justify-between gap-x-10   md:px-[40px] lg:px-0 lg:pt-[150px] px-4 pt-24 lg:pb-[72px]  ">
         <div className="w-full px-6 lg:px-0 md:ml-0 h-[345px] md:h-[500px] md:w-full lg:w-[590px] lg:max-w-[595px] lg:h-[620px]">
           <img
             src="../aboutPic.png"

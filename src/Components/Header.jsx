@@ -1,5 +1,4 @@
-
-import Container from "../Ui/Container";
+// import Container from "../Ui/Container";
 import useOpenContext from "./Contexts/useOpenContext";
 import Hamburger from "./Hamburger";
 import Logo from "./Logo";
@@ -9,23 +8,23 @@ import Navbody from "./Navbody";
 function Header() {
   const { open } = useOpenContext();
   return (
-    <div>
-      <Container background="#F2F4F6">
-        <div className="fixed top-[-2px] left-0 right-0 z-50 px-6 py-4 md:px-[62px] md:py-6 lg:px-[104px]  w-full  md:w-full  lg:max-w-[1440px] lg:h-[103px]  mx-auto bg-text-color-two ">
-          <div className="w-full mx-auto flex justify-between items-center ">
-            <Logo />
-            <Nav />
-            <Hamburger />
-          </div>
-          <div
-            className={`duration-500 ease-in-out  ${
-              open ? "translate-x-0" : "translate-x-[-200%] "
-            }`}
-          >
-            <Navbody />
-          </div>
+    <div className="w-full lg:h-[103px] inline-block bg-text-color-two fixed p-0 top-[-2px] left-0 right-0 z-50 ">
+      {/* <Container> */}
+      <div className="  px-6 py-4 md:px-[62px] md:py-6 lg:px-[104px]  w-full  md:w-full  lg:max-w-[1440px] lg:h-[103px]  mx-auto">
+        <div className="w-full mx-auto flex justify-between items-center ">
+          <Logo />
+          <Nav />
+          <Hamburger />
         </div>
-      </Container>
+        <div
+          className={`duration-500 ease-in-out  ${
+            open ? "translate-x-0" : "translate-x-[-200%] "
+          }`}
+        >
+          <Navbody />
+        </div>
+      </div>
+      {/* </Container> */}
     </div>
   );
 }

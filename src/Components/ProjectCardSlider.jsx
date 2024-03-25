@@ -3,11 +3,10 @@ function ProjectCardSlider({ sliderProperties }) {
   return (
     <div className="px-6 md:px-0">
       <div
-        className=" relative z-10 flex items-center justify-center  w-full h-[295px]  md:w-[310px] md:h-[310px] lg:w-[560px] lg:max-w-[600px] lg:h-[500px] rounded-[16px]   md:p-8  lg:p-[40px] "
+        className=" relative z-10 flex items-center justify-center  w-full h-[295px]  md:w-[310px] md:h-[310px] lg:w-[570px] xl:w-[600px] lg:h-[500px] rounded-[16px]   md:p-8  lg:py-[40px] lg:px-[0px]  "
         style={borderBg}
       >
-        <div className="absolute w-full z-10 px-6 lg:px-8   mx-auto my-4 rounded-[16px] ">
-          {/* <div className="w-full absolute z-20 inset-0 flex justify-center items-center rounded-[16px]"> */}
+        <div className="absolute w-full z-10 px-6 lg:px-8  mx-auto my-4 rounded-[16px] ">
           {
             <Slider {...settings}>
               {images.map((each, i) => (

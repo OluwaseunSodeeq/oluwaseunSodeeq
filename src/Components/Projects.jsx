@@ -101,9 +101,6 @@ function Projects() {
   return (
     <div className="py-4 h-auto bg-plain-white lg:px-0  ">
       <ContentContainer>
-        {/* <h4 className=" ml-6 md:ml-0  font-[600] font-inter leading-10 text-3xl text-text-color ">
-          My Last 3 projects
-        </h4> */}
         <div className="pl-6  lg:pl-0">
           <SubsectionsHeader title="Projects" header="Recent projects" />
         </div>
@@ -115,12 +112,12 @@ function Projects() {
           return (
             <div
               key={ind}
-              className=" lg:max-w-[1440px] lg:mx-auto pb-[32px] pt-8 md:pt-[52px] md:pb-[72px] md:px-4 lg:px-0 "
+              className="lg:w-full  lg:mx-auto pb-[32px] pt-8 md:pt-[52px] md:pb-[72px] md:px-4 lg:px-0  "
               style={{ backgroundColor: projBg }}
             >
               <ContentContainer>
                 <div
-                  className={`flex flex-col gap-y-5 md:gap-7 md:justify-between  ${
+                  className={`w-full flex flex-col gap-y-5 md:gap-7 md:justify-between items-center   ${
                     (ind + 1) % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
                   }`}
                 >
@@ -128,6 +125,7 @@ function Projects() {
                   <ProjectCardSlider
                     sliderProperties={{ borderBg, settings, images, Slider }}
                   />
+
                   <div className="w-full flex justify-end pr-6 md:hidden">
                     <button className="px-3 py-2 border rounded-[8px] mt-3 bg-blue-text text-plain-white hover:bg-plain-white hover:text-blue-text hover:shadow-custom">
                       <Link to={url}>View Website</Link>
