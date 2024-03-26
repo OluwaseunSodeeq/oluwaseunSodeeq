@@ -1,4 +1,6 @@
 import Container from "../Ui/Container";
+import { Link } from "react-router-dom";
+
 import ContentContainer from "../Ui/ContentContainer";
 import Earth from "./Earth";
 
@@ -32,7 +34,7 @@ function HomepageHeroSection() {
               <button
                 className={`px-3 py-2 md:px-4  text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-blue-text text-text-color-two rounded-[8px]`}
               >
-                Get in Touch
+                <Link to="/contact">Get in Touch</Link>
               </button>
               <button
                 className={`px-3 py-2 md:px-4  text-nowrap text-base font-normal font-outfit leading-6 border-2 border-blue-text bg-plain-white hover:bg-text-color-two text-btn-text-color rounded-[8px]`}

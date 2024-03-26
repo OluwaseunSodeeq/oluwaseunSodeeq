@@ -2,15 +2,15 @@ import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 function ProjectCardCOntent({ each, ind }) {
-  const mobilebreakpoint = useMediaQuery({ maxWidth: 450 });
+  const mobilebreakpoint = useMediaQuery({ maxWidth: 767 });
   const tabletbreakpoint = useMediaQuery({ maxWidth: 1024 });
   const desktopbreakpoint = useMediaQuery({ minWidth: 1025 });
 
-  const { title, aboutProject, logo, tools, url } = each;
+  const { title, aboutProject, logo, tools, url, id } = each;
   const [setence1, setence2, setence3] = aboutProject;
 
   return (
-    <div className="relative  p-6 md:px-2 md-p-2 lg:pl-5 lg:pt-3 lg:pb-3 h-auto md:w-[310px] md:h-[310px] lg:w-[550px] xl:w-[600px] lg:h-[500px] md:max-h-auto  rounded-[16px] ">
+    <div className="relative p-6 md:px-2 md-p-2 lg:pt-3 lg:pb-3 h-auto  md:w-1/2 md:h-[310px]   lg:h-[500px] md:max-h-auto  rounded-[16px]">
       <div
         className={`${
           title !== "IP-Address-Tracker"
@@ -18,7 +18,11 @@ function ProjectCardCOntent({ each, ind }) {
             : "w-auto"
         } h-[47px] lg:h-[73px] lg:mt-2 `}
       >
-        <img src={logo} alt={title} />
+        <img
+          src={logo}
+          alt={title}
+          className={`${id === 2 ? "ml-[-10px]" : ""}`}
+        />
       </div>
       <p className=" text-[14px] md:text-base font-normal leading-6 font-inter text-btn-text-color mt-4  lg:mt-6 ">
         {mobilebreakpoint && setence1 + setence2}
@@ -53,11 +57,11 @@ function ProjectCardCOntent({ each, ind }) {
         </h6>
       </div>
       <div
-        className={`hidden w-full absolute md:bottom-[5px] lg:bottom-8 md:flex md:justify-end 
+        className={`hidden w-full absolute md:bottom-[5px] lg:bottom-8 md:flex justify-end pr-7 
                       ${
                         (ind + 1) % 2 !== 0
-                          ? "lg:justify-end pr-12"
-                          : "lg:justify-start"
+                          ? "md:justify-end pr-4"
+                          : "md:justify-start pr-0"
                       } `}
       >
         <button className="  px-3 py-2 border rounded-[8px]   bg-blue-text text-plain-white hover:bg-plain-white hover:text-blue-text hover:shadow-custom ">

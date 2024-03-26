@@ -1,36 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import useOpenContext from "./Contexts/useOpenContext";
+import CurrentNav from "./CurrentNav";
 function Navbody() {
   const { setOpen } = useOpenContext();
+  const location = useLocation();
+
   const closeHandler = function () {
     setOpen(false);
   };
 
   return (
     // <Container>
-    <div className=" w-full bg-text-color md:h-auto py-6 absolute top-[26px] z-30 border lg:hidden ">
-      <ul className=" pl-6 md:pl-[60px] flex h-auto  flex-col gap-y-2 items-center       ">
-        <li className="  font-bold font-quicksand text-[32px] leading-[45px] text-btn-text-color  hover:text-blue-text ">
-          <NavLink onClick={closeHandler} to="/">
-            Home
-          </NavLink>
+    <div className=" w-[120%] bg-plain-white h-screen py-6 absolute top-[26px] z-30  lg:hidden ">
+      <ul className="  flex h-auto  flex-col gap-0 items-center justify-start     ">
+        <li className=" flex items-center pl-6 font-medium w-full h-[48px] border-t-2 border-btn-text-color-400 font-quicksand text-base leading-[32px] text-btn-text-color  hover:text-blue-text ">
+          <CurrentNav onClick={closeHandler} to="/" location={location}>
+            HOME
+          </CurrentNav>
         </li>
 
-        {/* <li className="  font-bold font-quicksand text-[32px] leading-[48px] text-btn-text-color  hover:text-blue-text ">
-              <NavLink onClick={closeHandler} to="/">
-                Resume
-              </NavLink>
-            </li> */}
-
-        <li className="  font-bold font-quicksand text-[32px] leading-[48px] text-btn-text-color  hover:text-blue-text ">
-          <NavLink onClick={closeHandler} to="/about">
-            About
-          </NavLink>
+        <li className="flex items-center pl-6 font-medium w-full h-[48px] border-t-2 border-b-2 border-btn-text-color-400font-quicksand text-base leading-[32px] text-btn-text-color  hover:text-blue-text ">
+          <CurrentNav onClick={closeHandler} to="/about" location={location}>
+            ABOUT
+          </CurrentNav>
         </li>
-        <li className="  font-bold font-quicksand text-[32px] leading-[48px] text-btn-text-color  hover:text-blue-text ">
-          <NavLink onClick={closeHandler} to="/contact">
-            Contact
-          </NavLink>
+        <li className=" flex items-center pl-6 font-medium w-full h-[48px] border-b-2 border-btn-text-color-400 font-quicksand text-base leading-[32px] text-btn-text-color  hover:text-blue-text ">
+          <CurrentNav onClick={closeHandler} to="/contact" location={location}>
+            CONTACT
+          </CurrentNav>
         </li>
       </ul>
     </div>

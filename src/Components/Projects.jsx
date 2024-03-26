@@ -13,7 +13,13 @@ import { Link } from "react-router-dom";
 function Projects() {
   const projectSliderItems = [
     {
-      images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
+      id: 1,
+      images: [
+        "../bespro1.png",
+        "../bespro2.png",
+        "../bespro3.png",
+        "../bespro4.png",
+      ],
       projBg: "#F8FEF9",
       title: "BES",
       aboutProject: [
@@ -30,7 +36,8 @@ function Projects() {
       url: "https://bes-beta.vercel.app/",
     },
     {
-      images: ["../bespro1.png", "../bespro3.png", "../bespro3.png"],
+      id: 2,
+      images: ["../aj01.png", "../aj02.png", "../aj03.png"],
       projBg: "#F7F7F7",
       tech: "",
       title: "AJ-portfolio",
@@ -47,14 +54,15 @@ function Projects() {
       url: "https://abdul-gafar.netlify.app/",
     },
     {
-      images: ["../ip-tracker-pic.png", "../ip-tracker-pic.png"],
+      id: 3,
+      images: ["../ip-design.jpg", "../ip-web.PNG"],
       projBg: "#FEFEFE",
       tech: "",
       title: "IP-Address-Tracker",
       aboutProject: [
         "This is a dynamic website developed using HTML,CSS and JavaScript, inspired by a challenge from Frontend Mentor.",
-        "",
         " This website effortlessly fetches and displays location, ISP, timezone, and current IP address information based on user input, complete with robust error handling for incorrect entries.",
+        "",
       ],
       tools: "Html,Css and JavaScript",
       logo: "../fontendMentor-Logo.png",
@@ -80,7 +88,7 @@ function Projects() {
       <>
         <ul className="slick-dots"></ul>
         <ul
-          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-26px] md:bottom-[-28px] lg:bottom-[-30px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
+          className={`flex justify-center items-center absolute w-[88px] h-[26px]  gap-x-2 rounded-[12px] bottom-[-26px] md:bottom-[-28px] lg:bottom-[-37px] inset-x-0 mx-auto left-0 right-0 cursor-not-allowed `}
         >
           {dots.map((dot, index) => (
             <li
@@ -117,7 +125,7 @@ function Projects() {
             >
               <ContentContainer>
                 <div
-                  className={`w-full flex flex-col gap-y-5 md:gap-7 md:justify-between items-center   ${
+                  className={`w-full  flex flex-col gap-5 md:gap-6 lg:gap-8 md:justify-between items-center   ${
                     (ind + 1) % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
                   }`}
                 >

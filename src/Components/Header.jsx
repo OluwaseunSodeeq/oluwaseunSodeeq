@@ -1,4 +1,5 @@
 // import Container from "../Ui/Container";
+// import NewHeader from "./Newheader";
 import useOpenContext from "./Contexts/useOpenContext";
 import Hamburger from "./Hamburger";
 import Logo from "./Logo";
@@ -7,8 +8,10 @@ import Navbody from "./Navbody";
 
 function Header() {
   const { open } = useOpenContext();
+
   return (
     <div className="w-full lg:h-[103px] inline-block bg-text-color-two fixed p-0 top-[-2px] left-0 right-0 z-50 ">
+      {/* <NewHeader /> */}
       {/* <Container> */}
       <div className="  px-6 py-4 md:px-[62px] md:py-6 lg:px-[104px]  w-full  md:w-full  lg:max-w-[1440px] lg:h-[103px]  mx-auto">
         <div className="w-full mx-auto flex justify-between items-center ">
