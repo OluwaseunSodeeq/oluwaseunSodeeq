@@ -67,7 +67,7 @@ function AboutHeroSection() {
                     <TypeAnimation
                       splitter={(str) => str.split(/(?= )/)}
                       sequence={[text]}
-                      speed={{ type: "constantDelayInMs", value: 99 }}
+                      speed={{ type: "constantDelayInMs", value: 200 }}
                       repeat={0}
                       cursor={false}
                     />

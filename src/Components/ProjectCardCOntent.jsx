@@ -64,9 +64,11 @@ function ProjectCardCOntent({ each, ind }) {
                           : "md:justify-start pr-0"
                       } `}
       >
-        <button className="  px-3 py-2 border rounded-[8px]   bg-blue-text text-plain-white hover:bg-plain-white hover:text-blue-text hover:shadow-custom ">
-          <Link to={url}>View Website</Link>
-        </button>
+        <Link to={url} target="_blank" rel="noopener noreferrer">
+          <button className="  px-3 py-2 border rounded-[8px]   bg-blue-text text-plain-white hover:bg-plain-white hover:text-blue-text hover:shadow-custom ">
+            View Website
+          </button>
+        </Link>
       </div>
     </div>
   );

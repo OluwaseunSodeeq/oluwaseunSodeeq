@@ -3,13 +3,26 @@ import Skill from "./Skill";
 import SubsectionsHeader from "./SubsectionsHeader";
 
 function Skills() {
+  // const skillsArray = [
+  //   { skill: "HTML", percent: 9 },
+  //   { skill: "CSS", percent: 9 },
+  //   { skill: "JAVASCRIPT", percent: 8 },
+  //   { skill: "REACT.JS", percent: 7 },
+  //   { skill: "TAILWIND CSS", percent: 7 },
+  //   { skill: "GIT", percent: 6 },
+  // ];
+
   const skillsArray = [
-    { skill: "HTML", percent: 9 },
-    { skill: "CSS", percent: 9 },
-    { skill: "JAVASCRIPT", percent: 8 },
-    { skill: "REACT.JS", percent: 7 },
-    { skill: "TAILWIND CSS", percent: 7 },
-    { skill: "GIT", percent: 6 },
+    { skill: "CSS" },
+    { skill: "HTML" },
+    { skill: "JAVASCRIPT" },
+    { skill: "REACTJS" },
+    { skill: "TAILWIND CSS" },
+    { skill: "CSS MODULES" },
+    { skill: "STYLED COMPONENT" },
+    { skill: "CRITICAL THINKING" },
+    { skill: "PROBLEM SOLVING" },
+    { skill: "GREAT VERBAL AND WRITTEN COMMUNICATION" },
   ];
   const maxPercent = 10;
   return (
@@ -30,10 +43,20 @@ function Skills() {
             </p>
           </div>
           <div className="shadow-custom pb-4 lg:pb-2">
-            <div className="mt-6 pb-4   pt-4 px-4 rounded-[16px]  lg:flex lg:flex-wrap  lg:gap-x-[40px] ">
-              {skillsArray.map((each) => (
-                <Skill each={each} maxPercent={maxPercent} key={each.skill} />
-              ))}
+            <div className="mt-6 pb-4   pt-4 px-4 rounded-[16px] ">
+              <h4 className="text-blue-text text-base font-medium leading-6 font-inter">
+                Technical and Organisational :
+              </h4>
+              <div className=" lg:flex lg:flex-wrap  lg:gap-x-[30px] ">
+                {skillsArray.map((each, i) => (
+                  <Skill
+                    each={each}
+                    i={i}
+                    maxPercent={maxPercent}
+                    key={each.skill}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

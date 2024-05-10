@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 function Logo() {
-  const breakpoint = useMediaQuery({ maxWidth: 768 });
+  const breakpoint = useMediaQuery({ maxWidth: 700 });
 
   return (
     <div className=" cursor-pointer  ">
