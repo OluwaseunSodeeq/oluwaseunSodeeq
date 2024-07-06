@@ -6,9 +6,11 @@ import Header from "../Header";
 function About() {
   return (
     <Container background="#fff">
-      <Header />
-      <AboutHeroSection />
-      <Footer />
+      <section className="w-full p-0 overflow-x-hidden">
+        <Header />
+        <AboutHeroSection />
+        <Footer />
+      </section>
     </Container>
   );
 }

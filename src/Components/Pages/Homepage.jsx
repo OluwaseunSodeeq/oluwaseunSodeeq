@@ -6,13 +6,13 @@ import Skills from "../Skills";
 
 function Homepage() {
   return (
-    <>
+    <section className="w-full p-0 overflow-x-hidden">
       <Header />
       <HomepageHeroSection />
       <Skills />
       <Projects />
       <Footer />
-    </>
+    </section>
   );
 }
 

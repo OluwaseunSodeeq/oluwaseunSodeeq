@@ -6,11 +6,11 @@ import ContactHeroSection from "../ContactHeroSection";
 function Contact() {
   return (
     <Container>
-      {/* <div> */}
-      <Header />
-      <ContactHeroSection />
-      <Footer />
-      {/* </div> */}
+      <section className="w-full p-0 overflow-x-hidden">
+        <Header />
+        <ContactHeroSection />
+        <Footer />
+      </section>
     </Container>
   );
 }
