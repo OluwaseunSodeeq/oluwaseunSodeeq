@@ -24,10 +24,10 @@ function Projects() {
       title: "BES",
       aboutProject: [
         "BES is a meticulously crafted website highlighting its comprehensive range of services and commitment to excellence.",
-        "Explore our office location and connect with us effortlessly through our user-friendly contact form, ensuring seamless communication for potential clients.",
-        "Dive into our latest project showcase to witness our innovative solutions and dedication to delivering exceptional results firsthand.",
+        " Explore our office location and connect with us effortlessly through our user-friendly contact form, ensuring seamless communication for potential clients.",
+        " Dive into our latest project showcase to witness our innovative solutions and dedication to delivering exceptional results firsthand.",
       ],
-      tools: "CSS Modules, Context api, React Router, Hooks",
+      tools: "CSS Modules, Context api, React Router, Hooks, Git",
       logo: "../besLogo.png",
       borderBg: {
         background:
@@ -43,10 +43,10 @@ function Projects() {
       title: "AJ-portfolio",
       aboutProject: [
         " AJ's portfolio website highlights the expertise of a skilled product designer, showcasing recent projects and capabilities.",
-        "Employers can easily connect with AJ via a user-friendly contact form for potential collaborations.",
-        "Explore the latest project page for insights into AJ's innovative solutions and commitment to excellence in product design.",
+        " Employers can easily connect with AJ via a user-friendly contact form for potential collaborations.",
+        " Explore the latest project page for insights into AJ's innovative solutions and commitment to excellence in product design.",
       ],
-      tools: "Tailwind css, React-router, Context Api, Hooks",
+      tools: "Tailwind css, React-router, Context Api, Hooks, Git",
       logo: "../aj-logo.png",
       borderBg: {
         background: "linear-gradient(180deg, #CED3DC 0%, #67696E 100%)",
@@ -55,16 +55,40 @@ function Projects() {
     },
     {
       id: 3,
+      images: [
+        "../loginLL.PNG",
+        "../homeLL.PNG",
+        "../reservationLL.PNG",
+        "../orderLL.PNG",
+        
+      ],
+      projBg: "#F8FEF9",
+      title: "Little Lemon",
+      aboutProject: [
+        "Little Lemon is the final project of the Front-End Development Professional Certificate program, an online course hosted on Coursera and led by Meta.",
+        " This 🍋 is a dynamic website that transforms the user experience while capturing the essence of a family-inherited restaurant.",
+        " Explore our menu, make a reservation and order online with ease.",
+      ],
+      tools: "Styled Components, Context API & useReducer, React Router, Hooks, LocalStorage, Formik & Yup, Git",
+      logo: "../lemon-logo.png",
+      borderBg: {
+        background:
+          "linear-gradient(180deg, rgba(0, 112, 60, 0.4) 0%, rgba(0, 92, 183, 0.4) 100%)",
+      },
+      url: "https://little-lemon-indol.vercel.app/",
+    },
+    {
+      id: 4,
       images: ["../ip-design.jpg", "../ip-web.PNG"],
       projBg: "#FEFEFE",
       tech: "",
       title: "IP-Address-Tracker",
       aboutProject: [
-        "This is a dynamic website developed using HTML,CSS and JavaScript, inspired by a challenge from Frontend Mentor.",
+        "This is a dynamic website developed using HTML, CSS, Git and JavaScript, inspired by a challenge from Frontend Mentor.",
         " This website effortlessly fetches and displays location, ISP, timezone, and current IP address information based on user input, complete with robust error handling for incorrect entries.",
         "",
       ],
-      tools: "Html,Css and JavaScript",
+      tools: "Html, Css and JavaScript",
       logo: "../fontendMentor-Logo.png",
       borderBg: {
         background: "linear-gradient(180deg, #CED3DC 0%, #5B7BE4 100%)",

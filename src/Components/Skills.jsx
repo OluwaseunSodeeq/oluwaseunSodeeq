@@ -15,6 +15,7 @@ function Skills() {
   const skillsArray = [
     { skill: "CSS" },
     { skill: "HTML" },
+    { skill: "PYTHON" },
     { skill: "JAVASCRIPT" },
     { skill: "REACTJS" },
     { skill: "TAILWIND CSS" },
