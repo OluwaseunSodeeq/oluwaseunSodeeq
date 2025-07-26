@@ -93,7 +93,7 @@ function Projects() {
       borderBg: {
         background: "linear-gradient(180deg, #CED3DC 0%, #5B7BE4 100%)",
       },
-      url: "https://oluwaseunsodeeq.github.io/ip-address-tracker",
+      url: "https://oluwaseunsodeeq.github.io/ip-address-tracker/",
     },
   ];
 
