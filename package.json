@@ -1,11 +1,9 @@
 {
   "name": "oluwaseunsodeeq",
-  "homepage": "https://oluwaseunsodeeq.github.io/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "vite build"
+
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
@@ -40,5 +38,5 @@
     "vite": "^5.1.0",
     "vite-plugin-eslint": "^1.8.1"
   }
-  
+
 }
