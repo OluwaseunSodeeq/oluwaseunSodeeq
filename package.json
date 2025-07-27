@@ -1,9 +1,9 @@
 {
   "name": "oluwaseunsodeeq",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
-
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
@@ -38,6 +38,6 @@
     "vite": "^5.1.0",
     "vite-plugin-eslint": "^1.8.1"
   }
-
 }
+
 // updated
